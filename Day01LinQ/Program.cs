@@ -22,6 +22,20 @@
             // Var Must be Intialize 
             Data "May";
             #endregion
+            #region dynamic
+            //dynamic Data = "Ali"; 
+            //// CLR Will Detect Datatype Of Variable At Runtime 
+            //// Based On It's Last Assigned Value 
+            //dynamic X; // Valid 
+            //// Can Declare Variable With Dynamic Without Intialization 
+            //dynamic Y = null; // Valid 
+            //// Can Be Intialized With Null 
+            //Data = 2; 
+            //// After Intialization, You Can Change Datatype Of Variable 
+            //Data = true; 
+            //Data = 3.3; 
+            //Data = 'A';
+            #endregion
             #endregion
         }
     }
