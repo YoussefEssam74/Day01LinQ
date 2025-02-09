@@ -14,13 +14,13 @@
             //var X = null; 
             // Invalid 
             // Var Can't be Intialized With Null 
-            Data = null;
+            // Data = null;
             //Data = 5; 
             // Invalid 
             // After Intialization, You Can't Change Variable Datatype 
             //var X; // Invalid 
             // Var Must be Intialize 
-            Data "May";
+            // Data "May";
             #endregion
             #region dynamic
             //dynamic Data = "Ali"; 
@@ -35,6 +35,11 @@
             //Data = true; 
             //Data = 3.3; 
             //Data = 'A';
+            #endregion
+            #region Extention Method
+            // int x = 12345;
+            // int y =x.Reverse();
+            // Console.WriteLine(y); 
             #endregion
             #endregion
         }
