@@ -1,4 +1,6 @@
-﻿namespace Day01LinQ
+﻿using System.Text.RegularExpressions;
+
+namespace Day01LinQ
 {
     internal class Program
     {
@@ -69,6 +71,50 @@
             //var Emp07 = new { Id = 70, Name = "Salma" };
             //Console.WriteLine($"Emp 07 = {Emp07.GetType().Name}");// Anonymous Type2 2
 
+            #endregion
+            #region what is a linq
+            // LINQ => Langauge Integrated Query 
+            // LINQ +40 Extension Methods 
+            // Extension Methods For All Collection That Impelment Interface "IEnumerable" 
+            // Named As LINQ Operators Existed At Class Enumerable 
+            // Categorized into 13 Category 
+            // List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            // List<int> OddNumbers = Numbers.Where(Num => Num % 2 == 1).ToList();
+            //foreach (int num in OddNumbers)
+            //{
+            //    Console.WriteLine($"{num} ");
+
+            //}
+            // You Can Use "LINQ Operator" Against The Data [Stored In Sequence] 
+            // Regardless Data Store [Sql Server, Oracle MySql] 
+            // Sequence -> The Object From Class That Impelment Built In Interface "IEnumerable" 
+            // 1. Local -> Static [L20bject], XML File [L2XML] 
+            // 2. Remote  -> L2EF
+            #endregion
+            #region linq syntax [fluent,query syntax]
+              List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            // // 1.1 Call "LINQ Operators" as Static Method
+            //  var OddNumbers = Enumerable. Where(Numbers, X => X % 2 ==1);
+            //  //1.2 Call "LINQ Operators" As Extension Method [Recommended] 
+            //  OddNumbers = Numbers.Where(X => X % 2 == 1);
+            //  foreach (var number in OddNumbers)
+            //  {
+            //      Console.Write($"{number} "); // 13579 
+            //  }
+            #endregion
+            #region query syntax like sql style
+            // 3. Select * 
+            // 1. From Numbers N 
+            // 2. Where N % 2 == 1 
+         //   var OddNumbers = from N in Numbers
+            //                 where N % 2 == 1
+            //                 select N;
+            //foreach (var Number in OddNumbers)
+            //{
+            //    Console.Write($"{Number} "); // 13579
+            //}
+            // Must be Begin With Keyword "From" I
+           //  Must Be End With Select OR GroupBy
             #endregion
             #endregion
         }
