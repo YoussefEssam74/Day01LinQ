@@ -1,4 +1,6 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Net.NetworkInformation;
+using System.Text.RegularExpressions;
+using static Day01LinQ.ListGenerator;
 
 namespace Day01LinQ
 {
@@ -118,28 +120,57 @@ namespace Day01LinQ
             //  Must Be End With Select OR GroupBy
             #endregion
             #region Deffered Execution [latest version of data]
-           // List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-           // var OddNumbers = Numbers.Where(X => X % 2 == 1); //13579 
-           // Numbers.AddRange(new int[] { 11, 12, 13, 14, 15 });
-           // // Where Is Executed With Deferred Execution 
-           // foreach (var number in OddNumbers)
-           // {
-           //     Console.Write($"{number} "); // 13579
-           // }
+            // List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            // var OddNumbers = Numbers.Where(X => X % 2 == 1); //13579 
+            // Numbers.AddRange(new int[] { 11, 12, 13, 14, 15 });
+            // // Where Is Executed With Deferred Execution 
+            // foreach (var number in OddNumbers)
+            // {
+            //     Console.Write($"{number} "); // 13579
+            // }
 
             #endregion
             #region Immediate Execution [Elements Opertors, Casting Operators, Aggregate Operators]
-          //  List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-          //  var OddNumbers = Numbers.Where(X => X % 2 == 1).ToList(); //13579 
-          //  Numbers.AddRange(new int[] { 11, 12, 13, 14, 15});
-          //  // Where Is Executed With Deferred Execution 
-          //  foreach (var number in OddNumbers)
-          //  {
-          //      Console.Write($"{number} "); // 13579
-          //  }
+            //  List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //  var OddNumbers = Numbers.Where(X => X % 2 == 1).ToList(); //13579 
+            //  Numbers.AddRange(new int[] { 11, 12, 13, 14, 15});
+            //  // Where Is Executed With Deferred Execution 
+            //  foreach (var number in OddNumbers)
+            //  {
+            //      Console.Write($"{number} "); // 13579
+            //  }
+            #endregion
+            #region data setup
+            //Console.WriteLine(ProductsList[0]);
+            //Console.WriteLine(CustomersList[0]); 
+            #endregion
+            #region Get Products Out Of Stock 
+            ////// Fluent Syntax 
+            //var Result = ProductsList.Where(P => P. UnitsInStock == 0);
+            ////// Query Syntax 
+            //Result = from P in ProductsList
+            //         where P.UnitsInStock == 0
+            //         select P; 
+            
+            //foreach (var item in Result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+            #region ex02
+         // var Result = ProductsList.Where(P => P.UnitsInStock > 0 && P.Category == "Meat/Poultry");
+         // // Query Syntax 
+         // Result = from P in ProductsList
+         //          where P. UnitsInStock > 0 && P.Category == "Meat/Poultry"
+         //         select P;
+         // foreach (var item in Result)
+         // {
+         //     Console.WriteLine(item);
+         // }
                 #endregion
 
-            
+
+
         }
     }
 }
