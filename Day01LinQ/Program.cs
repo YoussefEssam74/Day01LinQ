@@ -72,6 +72,7 @@ namespace Day01LinQ
             //Console.WriteLine($"Emp 07 = {Emp07.GetType().Name}");// Anonymous Type2 2
 
             #endregion
+            #endregion
             #region what is a linq
             // LINQ => Langauge Integrated Query 
             // LINQ +40 Extension Methods 
@@ -92,7 +93,7 @@ namespace Day01LinQ
             // 2. Remote  -> L2EF
             #endregion
             #region linq syntax [fluent,query syntax]
-              List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             // // 1.1 Call "LINQ Operators" as Static Method
             //  var OddNumbers = Enumerable. Where(Numbers, X => X % 2 ==1);
             //  //1.2 Call "LINQ Operators" As Extension Method [Recommended] 
@@ -106,7 +107,7 @@ namespace Day01LinQ
             // 3. Select * 
             // 1. From Numbers N 
             // 2. Where N % 2 == 1 
-         //   var OddNumbers = from N in Numbers
+            //   var OddNumbers = from N in Numbers
             //                 where N % 2 == 1
             //                 select N;
             //foreach (var Number in OddNumbers)
@@ -114,9 +115,31 @@ namespace Day01LinQ
             //    Console.Write($"{Number} "); // 13579
             //}
             // Must be Begin With Keyword "From" I
-           //  Must Be End With Select OR GroupBy
+            //  Must Be End With Select OR GroupBy
             #endregion
+            #region Deffered Execution [latest version of data]
+           // List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+           // var OddNumbers = Numbers.Where(X => X % 2 == 1); //13579 
+           // Numbers.AddRange(new int[] { 11, 12, 13, 14, 15 });
+           // // Where Is Executed With Deferred Execution 
+           // foreach (var number in OddNumbers)
+           // {
+           //     Console.Write($"{number} "); // 13579
+           // }
+
             #endregion
+            #region Immediate Execution [Elements Opertors, Casting Operators, Aggregate Operators]
+          //  List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+          //  var OddNumbers = Numbers.Where(X => X % 2 == 1).ToList(); //13579 
+          //  Numbers.AddRange(new int[] { 11, 12, 13, 14, 15});
+          //  // Where Is Executed With Deferred Execution 
+          //  foreach (var number in OddNumbers)
+          //  {
+          //      Console.Write($"{number} "); // 13579
+          //  }
+                #endregion
+
+            
         }
     }
 }
