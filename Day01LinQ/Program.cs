@@ -447,11 +447,25 @@ namespace Day01LinQ
 
 
             #endregion
+            #region 7. Select all orders where the order was made in 1998 or later.
+            //var Result = CustomersList.Where(o => o.OrderDate.Year >= 1998);
+
+
+           // var Result = CustomersList.SelectMany(c => c.Orders, (c, o) => new { c.CustomerID, o.OrderID, o.OrderDate }).Where(c => c.OrderDate.Year >= 1998);
+           //
+           // foreach (var order in Result)
+           // {
+           //     Console.WriteLine($"Customer ID: {order.CustomerID}, Order ID: {order.OrderID}, Order Date: {order.OrderDate}");
+           // }
+
+            #endregion
+
+
             #endregion
 
 
 
 
         }
-        }
+    }
 }
